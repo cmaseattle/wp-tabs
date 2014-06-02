@@ -1,0 +1,25 @@
+.tabs {
+	display:block;
+}
+.tab-content {
+	display:none;
+}
+.tab-content.show {
+	display:block;
+}
+.tabs {
+	margin:0;
+	padding:0;
+}
+.tabs li {
+	list-style-type: none;
+	display:inline-block;
+	margin-right:20px;
+	padding:10px 15px;
+	border:1px solid #c0c0c0;
+	cursor:pointer;
+}
+.tabs li.current {
+	background-color:#c0c0c0;
+	color:#fff;
+}

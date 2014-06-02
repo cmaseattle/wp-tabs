@@ -1,0 +1,30 @@
+{
+  "name": "wp-tabs",
+  "version": "0.0.1",
+  "author": {
+    "name": "Creative Media Alliance",
+    "email": "sammatthews@creativemediaalliance.com",
+    "url": "http://www.creativemediaalliance.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cmaseattle/wp-tabs.git"
+  },
+  "description": "Use shortcodes to tab content within the WYSIWYG editor",
+  "homepage": "https://github.com/cmaseattle/wp-tabs",
+  "bugs": "https://github.com/cmaseattle/wp-tabs/issues",
+  "main": "tabs.php",
+  "licenses": [
+    {
+      "type": "GNU General Public License",
+      "url": "https://github.com/cmaseattle/wp-tabs/blob/master/LICENSE.txt"
+    }
+  ],
+  "devDependencies": {
+    "grunt-cli": "~0.1.7",
+    "grunt": "~0.4.1",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-jshint": "~0.3.0",
+    "grunt-contrib-cssmin": "~0.9.0"
+  }
+}
