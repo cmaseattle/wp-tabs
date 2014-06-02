@@ -16,10 +16,10 @@ varius lorem lacinia. Praesent in elit erat.
 [/tab]
 
 [tab title="Angelina Jolie"]
-Curabitur varius rhoncus sodales. Integer posuere magna at congue tincidunt. Cras interdum, lorem
-at tincidunt sagittis, diam lacus faucibus enim, nec tristique elit velit at mauris. Duis metus neque,
-luctus ut tortor non, lacinia luctus sapien. Nunc sit amet lorem eros. Curabitur sed fringilla massa.
-Pellentesque et mauris diam. Sed ac bibendum sem, id pulvinar augue. Vivamus id sem dignissim, ornare
+Curabitur varius rhoncus sodales. Integer posuere magna at congue tincidunt. Cras interdum,
+at tincidunt sagittis, diam lacus faucibus enim, nec tristique elit velit at mauris. Duis metus,
+luctus ut tortor non, lacinia luctus sapien. Nunc sit amet lorem eros. Curabitur sed fringilla.
+Pellentesque et mauris diam. Sed ac bibendum sem, id pulvinar augue. Vivamus id sem dignissim,
 ante vitae, pharetra lectus.
 [/tab]
 [/tabs]
