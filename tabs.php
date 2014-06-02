@@ -27,41 +27,41 @@
 */
 
 class WP_Tabs {
-	var $settings;
-	static function init() {
-		add_shortcode('tab', array( __CLASS__, 'single_tab') );
-		add_shortcode('tabs', array( __CLASS__, 'tabs_wrapper') );
+  var $settings;
+  static function init() {
+    add_shortcode('tab', array( __CLASS__, 'single_tab') );
+    add_shortcode('tabs', array( __CLASS__, 'tabs_wrapper') );
 
-		add_action( 'init', array(__CLASS__, 'register_scripts' ) );
-		add_action( 'wp_enqueue_scripts', array(__CLASS__, 'enqueue_scripts' ) );
-	}
+    add_action( 'init', array(__CLASS__, 'register_scripts' ) );
+    add_action( 'wp_enqueue_scripts', array(__CLASS__, 'enqueue_scripts' ) );
+  }
 
-	public static function single_tab($atts, $content = null) {
-		$a = shortcode_atts( array(
-			'title'	=> 'default',
-			'show_title' => 'false'
-		), $atts);
-		$tab_title = strtolower(preg_replace("/[\s_]/", "-", $a['title']));
-		$header;
-		if($a['show_title']==='true' || $a['show_title']==='True' || $a['show_title']==='TRUE')
-			$header = '<h3 class="tab-title">'.$a['title'].'</h3>';
-		return '<div class="tab-content" id="'.$tab_title.'" title="'.$a['title'].'">'.$header.$content.'</div>';
-	}
+  public static function single_tab($atts, $content = null) {
+    $a = shortcode_atts( array(
+      'title' => 'default',
+      'show_title' => 'false'
+    ), $atts);
+    $tab_title = strtolower(preg_replace("/[\s_]/", "-", $a['title']));
+    $header;
+    if($a['show_title']==='true' || $a['show_title']==='True' || $a['show_title']==='TRUE')
+      $header = '<h3 class="tab-title">'.$a['title'].'</h3>';
+    return '<div class="tab-content" id="'.$tab_title.'" title="'.$a['title'].'">'.$header.$content.'</div>';
+  }
 
-	public static function tabs_wrapper($atts, $content = null) {
-		$number_of_tabs = substr_count( $content, '[tab' );
-		return '<div class="tabs-wrapper"><ul class="tabs"></ul>'.do_shortcode($content).'</div>';
-	}
+  public static function tabs_wrapper($atts, $content = null) {
+    $number_of_tabs = substr_count( $content, '[tab' );
+    return '<div class="tabs-wrapper"><ul class="tabs"></ul>'.do_shortcode($content).'</div>';
+  }
 
-	static function register_scripts() {
-		$dir = plugin_dir_url( __FILE__ );
-		wp_register_script('wp-tabs-js', $dir . 'tabs.min.js', array('jquery'), '0.0.1' );
-		wp_register_style( 'wp-tabs-css', $dir . 'tabs.min.css', false, '0.0.1' );
-	}
-	static function enqueue_scripts() {
-		wp_enqueue_style('wp-tabs-css');
-		wp_enqueue_script('wp-tabs-js');
-	}
+  static function register_scripts() {
+    $dir = plugin_dir_url( __FILE__ );
+    wp_register_script('wp-tabs-js', $dir . 'tabs.min.js', array('jquery'), '0.0.1' );
+    wp_register_style( 'wp-tabs-css', $dir . 'tabs.min.css', false, '0.0.1' );
+  }
+  static function enqueue_scripts() {
+    wp_enqueue_style('wp-tabs-css');
+    wp_enqueue_script('wp-tabs-js');
+  }
 }
 
 // FIGHT.
